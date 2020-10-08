@@ -12,6 +12,14 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Profissional {
 	
+	public Profissional() {
+	}
+
+	public Profissional(Long id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;

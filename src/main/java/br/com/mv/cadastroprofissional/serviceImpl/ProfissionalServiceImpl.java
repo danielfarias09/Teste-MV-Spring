@@ -1,5 +1,6 @@
 package br.com.mv.cadastroprofissional.serviceImpl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +29,10 @@ public class ProfissionalServiceImpl implements ProfissionalService{
 	}
 
 	@Override
-	public List<Profissional> list() {
+	public List<Profissional> list() { 
+		if(profissionalRepository.findAll().isEmpty()) {
+			return Arrays.asList(new Profissional(1L, "Daniel Farias"), new Profissional(2L, "Izabel Farias"));
+		}
 		return profissionalRepository.findAll();
 	}
 

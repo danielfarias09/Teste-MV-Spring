@@ -47,6 +47,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>cadastro-profissional</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
